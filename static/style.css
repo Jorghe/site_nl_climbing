@@ -1,0 +1,57 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template:
+        "header header  header  " auto
+        "nav    article aside   " 1fr
+        "nav    footer  footer  " auto / auto    1fr     auto;
+}
+header {
+    font:
+        bold condensed 1.2rem / 1 
+        'Space Grotesk', sans-serif;
+    grid-area: header;
+}
+article {
+    font: 1.1rem / 1 'Roboto';
+
+    grid-area: article;
+}
+aside {
+    grid-area: aside;
+}
+nav {
+    grid-area: nav;
+}
+footer {
+    grid-area: footer;
+}
+.text {
+    font:
+        small-caps bold condensed
+        1.2rem / 1 'Montserrat', sans-serif;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: gap 200ms;
+    box-shadow: 0 10px 20px 0px black;
+}
+.card:hover {
+    gap: 24px;
+}
+:is(ul, ol) li {
+    list-style:square
+    
+}
+li:is(:hover, :focus){
+    background: hotpink;
+}
+li:has(a, span){
+    border: 2px;
+    border-radius:4px;
+}

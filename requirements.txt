@@ -1,0 +1,5 @@
+pandas
+deta
+fastapi
+numpy
+jinja2

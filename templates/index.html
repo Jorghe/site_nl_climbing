@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="theme-color" content="#4285f4"/>
+        <link href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
+        <link href="static/style.css" rel="stylesheet" type="text/css">
+        <title>nl Climbing</title>
+    </head>
+    <body>
+        <header><h1>Welcome to Nuevo León Climbing World</h1></header>
+        <nav></nav>
+        <article>
+            <ul>
+                <h2>Zonas</h2>
+                    <li class="card">
+                        <a href="/huaste"><p>La Huasteca</p></a>
+                        <span>por zona {{structured}} </span>
+                        <span>por grado</span>
+                    </li>
+
+                    <li class="card" >
+                        <a href="/epc"><p>El potrero Chico</p></a>
+                        <span>por zona {{request}} </span>
+                        <span>por grado</span>
+                    </li>
+                    <li class="card">
+                        <a href="/salto"><p>El Salto</p></a>
+                        <span>por zona {{structured}} </span>
+                        <span>por grado</span>
+                    </li>
+            </ul>
+            <p>{{grados}}</p>
+        </article>
+        <aside>
+            <h3>Comentarios</h3>
+            <form>
+                <span text-transform:none; >Nombre</span></span><input spellcheck="false"/>
+                <p contenteditable>Comentario</p>
+            </form>
+        </aside>
+        <footer></footer>
+    </body>
+
+</html>
